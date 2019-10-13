@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "0194839a-0e2d-4861-9ef5-dd4307be986f",
+		"name": "Gardening Tools",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Basic Requests",
+			"item": [
+				{
+					"name": "List Tools",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/tools",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tools"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tool",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/tools/axe",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tools",
+								"axe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Tool",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"toolId\": \"trowel\",\n        \"color\": \"blue\",\n        \"amount\": 53,\n        \"extra\": \"cheap\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/tools",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tools"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Tool",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"toolId\": \"trowel\",\n        \"color\": \"brown\",\n        \"amount\": 22,\n        \"extra\": \"golden\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/tools/trowel",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tools",
+								"trowel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tool",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/tools/trowel",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tools",
+								"trowel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "8abaa17b-cbc8-45a6-be0a-e6e75756ed81",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "13e8440d-2283-44b7-ad38-40049851a5bf",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "953b4abd-1fad-4fe9-b594-0a0461b24e05",
+			"key": "URL",
+			"value": "http://127.0.0.1:8080/api",
+			"type": "string"
+		}
+	]
+}
